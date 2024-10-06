@@ -72,7 +72,7 @@ export default function ExplorerPage() {
                 {/* Search History - only shown when focused */}
                 {isFocused && searchHistory.length > 0 && (
                     <View style={styles.historyContainer}>
-                        <Text style={styles.historyTitle}>Search History</Text>
+                        <Text style={styles.historyTitle}>Recent</Text>
                         <FlatList
                             data={searchHistory}
                             keyExtractor={(item, index) => index.toString()}
@@ -133,11 +133,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     cancelText: {
-        color: '#007AFF',
+        color: '#000000',
         fontSize: 16,
     },
     historyContainer: {
-        marginTop: 20,
+        marginTop: 15,
     },
     historyTitle: {
         fontWeight: 'bold',
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     historyItem: {
         paddingVertical: 10,
         fontSize: 16,
-        color: '#007AFF',
+        color: '#000000',
     },
     content: {
         alignItems: 'center',
