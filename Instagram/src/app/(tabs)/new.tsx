@@ -1,20 +1,47 @@
 import { Text, View, Image, TextInput, Pressable } from 'react-native';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import * as ImagePicker from 'expo-image-picker';
+
 
 export default function CreatePost() {
     const [caption, setCaption] = useState('');
+    const [image, setImage] = useState<string | null>(null);
+
+    useEffect(() => {
+        if (!image) {
+            pickImage();
+        }
+    }, [image])
+
+    const pickImage = async () => {
+        // No permissions request is necessary for launching the image library
+        let result = await ImagePicker.launchImageLibraryAsync({
+            mediaTypes: ImagePicker.MediaTypeOptions.Images,
+            allowsEditing: true,
+            aspect: [4, 3],
+            quality: 1,
+        });
+
+        console.log(result);
+
+        if (!result.canceled) {
+            setImage(result.assets[0].uri);
+        }
+    };
 
     return (
         <View style={{ padding: 12, alignItems: 'center', flex: 1 }}>
             {/* Image picker */}
+            {image ? (
             <Image
-                source={{
-                    uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg'
-                }}
-                style={{ width: 208, aspectRatio: 3 / 4, borderRadius: 12, backgroundColor: '#94A3B8' }} // bg-slate-300 equivalent
+                source={{ uri: image }}
+                style={{ width: 208, aspectRatio: 3 / 4, borderRadius: 12, backgroundColor: '#94A3B8' }}
             />
+            ):(
+                <View style={{ width: 208, aspectRatio: 3 / 4, borderRadius: 12, backgroundColor: '#94A3B8' }} />
+            )}
 
-            <Text onPress={() => { }} style={{ color: '#3B82F6', fontWeight: '600', marginVertical: 20 }}>
+            <Text onPress={pickImage} style={{ color: '#3B82F6', fontWeight: '600', marginVertical: 20 }}>
                 Change
             </Text>
 

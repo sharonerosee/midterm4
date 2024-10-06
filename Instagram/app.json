@@ -2,7 +2,7 @@
   "expo": {
     "name": "Instagram",
     "slug": "Instagram",
-     "scheme": "midtermIg",
+    "scheme": "midtermIg",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -26,7 +26,13 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
     ]
   }
 }
