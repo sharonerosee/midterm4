@@ -1,7 +1,7 @@
 import { Text, View, Image, TextInput, Pressable } from 'react-native';
 import { useEffect, useState } from 'react';
 import * as ImagePicker from 'expo-image-picker';
-
+import Button from '~/src/components/Button'
 
 export default function CreatePost() {
     const [caption, setCaption] = useState('');
@@ -33,11 +33,11 @@ export default function CreatePost() {
         <View style={{ padding: 12, alignItems: 'center', flex: 1 }}>
             {/* Image picker */}
             {image ? (
-            <Image
-                source={{ uri: image }}
-                style={{ width: 208, aspectRatio: 3 / 4, borderRadius: 12, backgroundColor: '#94A3B8' }}
-            />
-            ):(
+                <Image
+                    source={{ uri: image }}
+                    style={{ width: 208, aspectRatio: 3 / 4, borderRadius: 12, backgroundColor: '#94A3B8' }}
+                />
+            ) : (
                 <View style={{ width: 208, aspectRatio: 3 / 4, borderRadius: 12, backgroundColor: '#94A3B8' }} />
             )}
 
@@ -55,9 +55,7 @@ export default function CreatePost() {
 
             {/* Button */}
             <View style={{ marginTop: 'auto', width: '100%' }}>
-                <Pressable style={{ backgroundColor: '#3B82F6', width: '100%', padding: 16, alignItems: 'center', borderRadius: 10 }}>
-                    <Text style={{ color: 'white', fontWeight: '600' }}>Share</Text>
-                </Pressable>
+                <Button title='Share' />
             </View>
         </View>
     );
