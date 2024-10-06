@@ -8,7 +8,7 @@
         "id": "u1",
         "avatar_url": "samples/people/boy-snow-hoodie",
         "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-        "username": "sharangelica"
+        "username": "sharone_69637"
       }
     },
     {
@@ -20,7 +20,7 @@
         "id": "u1",
         "avatar_url": "samples/people/smiling-man",
         "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-        "username": "sharangelica"
+        "username": "angelica_69637"
       }
     },
     {
@@ -32,7 +32,7 @@
         "id": "u1",
         "avatar_url": "samples/bike",
         "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg",
-        "username": "sharangelica"
+        "username": "jovans_69637"
       }
     },
     {
@@ -44,7 +44,55 @@
         "id": "u1",
         "avatar_url": "samples/animals/cat",
         "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg",
-        "username": "sharangelica"
+        "username": "tugas"
+      }
+    },
+    {
+      "id": "5",
+      "image": "samples/landscapes/beach-boat",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+      "caption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
+      "user": {
+        "id": "u1",
+        "avatar_url": "samples/people/boy-snow-hoodie",
+        "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
+        "username": "individu"
+      }
+    },
+    {
+      "id": "6",
+      "image": "samples/woman-on-a-football-field",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg",
+      "caption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
+      "user": {
+        "id": "u1",
+        "avatar_url": "samples/people/smiling-man",
+        "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
+        "username": "midterm"
+      }
+    },
+    {
+      "id": "7",
+      "image": "samples/dessert-on-a-plate",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg",
+      "caption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
+      "user": {
+        "id": "u1",
+        "avatar_url": "samples/bike",
+        "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg",
+        "username": "cross_platform"
+      }
+    },
+    {
+      "id": "8",
+      "image": "samples/balloons",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/4.jpg",
+      "caption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
+      "user": {
+        "id": "u1",
+        "avatar_url": "samples/animals/cat",
+        "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg",
+        "username": "kelas_A"
       }
     }
   ]
