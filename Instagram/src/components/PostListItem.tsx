@@ -5,7 +5,7 @@ import { AntDesign, Ionicons, Feather } from '@expo/vector-icons';
 
 const post1 = posts[0];
 
-export default function PostListItem({post}) {
+export default function PostListItem({ post }) {
     return (
         <View className='bg-white'>
             {/* Header */}
@@ -27,7 +27,7 @@ export default function PostListItem({post}) {
                 <Ionicons name='chatbubble-outline' size={20} />
                 <Feather name='send' size={20} />
 
-                <Feather name='bookmark' size={20} className='ml-auto' />
+                <Feather name='bookmark' size={20} style={{ marginLeft: 'auto' }} />
             </View>
         </View>
     );
