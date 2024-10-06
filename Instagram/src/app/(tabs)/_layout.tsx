@@ -41,6 +41,7 @@ export default function TabsLayout(){
             tabBarIcon: ( {color} ) => (
                 <FontAwesome name="user" size={26} color={color} />
             ),
+            headerShown: false,
         }}
         />
     </Tabs>
