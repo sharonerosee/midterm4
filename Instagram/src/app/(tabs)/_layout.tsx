@@ -28,11 +28,12 @@ export default function TabsLayout(){
         }}
         />
 
-        <Tabs.Screen name='reels' 
+        <Tabs.Screen name='Reels' 
         options={{headerTitle: 'Reels Video',
             tabBarIcon: ( {color} ) => (
                 <FontAwesome name="video-camera" size={26} color={color} />
             ),
+            headerShown: false,
         }}
         />
         <Tabs.Screen name='profile' 
