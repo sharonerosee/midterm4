@@ -125,7 +125,7 @@ export const ProfileButtons = ({id, name, accountName, profileImage}) => {
           }}>
           <TouchableOpacity
             onPress={() =>
-              navigation.push('EditProfile', {
+              navigation.navigate('EditProfile', {
                 name: name,
                 accountName: accountName,
                 profileImage: profileImage,

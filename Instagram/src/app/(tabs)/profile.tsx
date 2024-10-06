@@ -1,13 +1,10 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
-import { ProfileBody, ProfileButtons } from '~/src/components/ProfileBody';
+import {View, Text, ScrollView} from 'react-native';
+import {ProfileBody, ProfileButtons} from '~/src/components/ProfileBody';
 import Entypo from 'react-native-vector-icons/Entypo';
 import BottomTabView from '~/src/components/BottomTabView';
-import { useNavigation } from '@react-navigation/native';
 
 const Profile = () => {
-  const navigation = useNavigation(); // Access the navigation object
-
   let circuls = [];
   let numberofcircels = 10;
 
@@ -26,7 +23,7 @@ const Profile = () => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Entypo name="plus" style={{ fontSize: 40, color: 'black' }} />
+            <Entypo name="plus" style={{fontSize: 40, color: 'black'}} />
           </View>
         ) : (
           <View
@@ -39,13 +36,13 @@ const Profile = () => {
               marginHorizontal: 5,
             }}></View>
         )}
-      </View>
+      </View>,
     );
   }
-
+  
   return (
-    <View style={{ width: '100%', height: '100%', backgroundColor: 'white' }}>
-      <View style={{ width: '100%', padding: 10 }}>
+    <View style={{width: '100%', height: '100%', backgroundColor: 'white'}}>
+      <View style={{width: '100%', padding: 10}}>
         <ProfileBody
           name="Mr Peobody"
           accountName="mr_peobody"
@@ -59,13 +56,6 @@ const Profile = () => {
           name="Mr Peobody"
           accountName="mr_peobody"
           profileImage={require('~/assets/images/userProfile.png')}
-          onEditProfile={() =>
-            navigation.navigate('EditProfile', {
-              name: 'Mr Peobody',
-              accountName: 'mr_peobody',
-              profileImage: require('~/assets/images/userProfile.png'),
-            })
-          }
         />
       </View>
       <View>
