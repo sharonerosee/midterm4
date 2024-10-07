@@ -1,8 +1,12 @@
-import { Text, View, Image } from 'react-native';
+import React, { useState } from 'react';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 import posts from '~/assets/data/posts.json';
 import { AntDesign, Ionicons, Feather } from '@expo/vector-icons';
 
-export default function PostListItem({post}) {
+
+
+export default function PostListItem({post, item}) {
+    // const [like, setLike] = useState(item.isLike);
     return (
         <View className='bg-white'>
             {/* Header */}
@@ -21,6 +25,13 @@ export default function PostListItem({post}) {
             {/* Icons */}
             <View className='flex-row gap-3 p-3'>
                 <AntDesign name="hearto" size={20} />
+                {/* <TouchableOpacity onPress={() => setLike(!like)} style={{ padding: 10 }}>
+                    <AntDesign
+                        name={like ? 'heart' : 'hearto'}
+                        style={{ color: like ? 'red' : 'white', fontSize: 20 }}
+                    />
+                    <Text style={{ color: 'white' }}>{item.likes}</Text>
+                </TouchableOpacity> */}
                 <Ionicons name='chatbubble-outline' size={20} />
                 <Feather name='send' size={20} />
 
