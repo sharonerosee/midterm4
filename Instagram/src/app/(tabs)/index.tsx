@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {View, Text, StatusBar, ScrollView} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
@@ -15,6 +15,20 @@ const loadFonts = () => {
   };
 
 const Index = () => {
+    const [fontsLoaded, setFontsLoaded] = useState(false);
+
+    useEffect(() => {
+      const loadAllFonts = async () => {
+        await loadFonts();
+        setFontsLoaded(true);
+      };
+      loadAllFonts();
+    }, []);
+  
+    if (!fontsLoaded) {
+      return <AppLoading />;
+    }
+  
   return (
     <View style={{backgroundColor: 'white', height: '100%'}}>
       <StatusBar
