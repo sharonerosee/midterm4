@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { View, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
-import Video from 'react-native-video';
+// import Video from 'react-native-video';
 import Ionic from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
@@ -11,7 +11,7 @@ const SingleReel = ({ item }) => {
     const windowHeight = Dimensions.get('window').height;
 
     const [mute, setMute] = useState(false);
-    const videoRef = useRef(null);
+    const videoRef = useRef('null');
 
     const onBuffer = (buffer: any) => {
         console.log('buffering', buffer);
@@ -90,7 +90,7 @@ const SingleReel = ({ item }) => {
                                     margin: 10,
                                 }}>
                                 <Image
-                                    source={item.postProfile}
+                                    source={item.videoData}
                                     style={{
                                         width: '100%',
                                         height: '100%',
@@ -117,7 +117,7 @@ const SingleReel = ({ item }) => {
             <View
                 style={{
                     position: 'absolute',
-                    bottom: 10, //edited
+                    bottom: 10,
                     right: 0,
                 }}>
                 <TouchableOpacity onPress={() => setLike(!like)} style={{ padding: 10 }}>

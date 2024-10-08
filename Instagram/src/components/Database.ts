@@ -10,8 +10,8 @@ export interface VideoData {
 export const videoData: VideoData[] = [
     {
         video: require('~/assets/videos/video1.mp4'), 
-        title: 'Sharone_Angel',
-        description: 'Feel the beauty of nature',
+        title: 'Sharonerosee',
+        description: 'Sharone Angelica 00000069637 CrossPlat A',
         likes: '245k',
         isLike: false,
         image_url: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg",
@@ -35,7 +35,7 @@ export const videoData: VideoData[] = [
     },
     {
         video: require('~/assets/videos/video4.mp4'),
-        title: 'queen_elizabeth',
+        title: 'elizabeth',
         description: 'I am the queen of british',
         likes: '502k',
         isLike: false,
