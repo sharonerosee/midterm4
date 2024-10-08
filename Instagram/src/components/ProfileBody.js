@@ -283,7 +283,6 @@ export const ProfileButtons = ({ id, name, accountName, profileImage }) => {
                         </Text>
                     </View>
                 </View>
-
             ) : (
                 <View
                     style={{

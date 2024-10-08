@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
 import { SwiperFlatList } from 'react-native-swiper-flatlist';
-import { videoData, VideoData } from './Database'; // Import the VideoData type
+import { videoData, VideoData } from './Database'; 
 import SingleReel from './SingleReel';
 
 const ReelsComponent: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState<number>(0); // Specify the state type
+  const [currentIndex, setCurrentIndex] = useState<number>(0); 
 
-  const handleChangeIndexValue = ({ index }: { index: number }) => { // Define the parameter type
+  const handleChangeIndexValue = ({ index }: { index: number }) => {
     setCurrentIndex(index);
   };
 
@@ -19,7 +18,7 @@ const ReelsComponent: React.FC = () => {
       renderItem={({ item, index }: { item: VideoData; index: number }) => (
         <SingleReel item={item} index={index} currentIndex={currentIndex} />
       )}
-      keyExtractor={(item, index) => index.toString()} // Ensure keyExtractor returns a string
+      keyExtractor={(item, index) => index.toString()} 
     />
   );
 };

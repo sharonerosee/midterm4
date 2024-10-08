@@ -12,7 +12,6 @@ const Reels: React.FC = () => {
       style={{
         width: windowWidth,
         height: windowHeight,
-        backgroundColor: 'white',
         position: 'relative',
         backgroundColor: 'black',
       }}
@@ -27,6 +26,7 @@ const Reels: React.FC = () => {
           justifyContent: 'space-between',
           zIndex: 1,
           padding: 10,
+          paddingTop: 40
         }}
       >
         <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'white', paddingTop: 25}}>

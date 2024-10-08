@@ -41,7 +41,9 @@ const Search = () => {
   const handleSearchSubmit = () => {
     if (searchText.trim() !== '') {
       // Add to search history only when the search is submitted
-      setSearchHistory((prevHistory) => [searchText, ...prevHistory]);
+      setSearchHistory((prevHistory) => {
+        return [searchText, ...prevHistory];
+      });
       setSearchText(''); // Clear input after search
     }
     dismissKeyboard(); // Dismiss keyboard after submitting

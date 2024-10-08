@@ -59,14 +59,6 @@ const Profile = () => {
         />
       </View>
       <View>
-        <Text
-          style={{
-            padding: 10,
-            letterSpacing: 1,
-            fontSize: 14,
-          }}>
-          Story Highlights
-        </Text>
         <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}
