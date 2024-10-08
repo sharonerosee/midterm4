@@ -6,29 +6,29 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 // Mapping of labels to icons
 const iconMapping = {
-    'Accounts Center': 'shield', 
+    'Accounts Center': 'shield',
     'Saved': 'bookmark',
-    'Archive': 'archive', 
-    'Your activity': 'activity', 
-    'Notifications': 'bell', 
-    'Time management': 'clock', 
-    'Insights': 'bar-chart', 
-    'Scheduled content': 'calendar', 
-    'Creator tools and controls': 'bar-chart-2', 
-    'Meta Verified': 'check-circle', 
-    'Account Privacy': 'lock', 
+    'Archive': 'archive',
+    'Your activity': 'activity',
+    'Notifications': 'bell',
+    'Time management': 'clock',
+    'Insights': 'bar-chart',
+    'Scheduled content': 'calendar',
+    'Creator tools and controls': 'bar-chart-2',
+    'Meta Verified': 'check-circle',
+    'Account Privacy': 'lock',
     'Close Friend': 'users',
     'Crossposting': 'share',
-    'Blocked': 'slash', 
+    'Blocked': 'slash',
     'Hide story and live': 'eye-off',
-    'Messages and story replied': 'message-circle', 
-    'Tags and mentions': 'tag', 
-    'Comments': 'message-square', 
-    'Sharing and remixes': 'share-2', 
-    'Restricted': 'user-x', 
-    'Limit interactions': 'user-minus', 
-    'Hidden Words': 'alert-triangle', 
-    'Follow and invite friends': 'user-plus' 
+    'Messages and story replied': 'message-circle',
+    'Tags and mentions': 'tag',
+    'Comments': 'message-square',
+    'Sharing and remixes': 'share-2',
+    'Restricted': 'user-x',
+    'Limit interactions': 'user-minus',
+    'Hidden Words': 'alert-triangle',
+    'Follow and invite friends': 'user-plus'
 };
 
 export const ProfileBody = ({
@@ -70,7 +70,7 @@ export const ProfileBody = ({
     ];
 
     // Filter options based on search term
-    const filteredOptions = options.filter(option => 
+    const filteredOptions = options.filter(option =>
         option.label.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
@@ -119,7 +119,7 @@ export const ProfileBody = ({
                                 <TouchableOpacity onPress={() => setShowOptions(false)}>
                                     <Feather name="chevron-left" style={{ fontSize: 25, color: 'white', marginRight: 10 }} />
                                 </TouchableOpacity>
-                                <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold', flex: 0.85, textAlign: 'center'}}>Settings and activity</Text>
+                                <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold', flex: 0.85, textAlign: 'center' }}>Settings and activity</Text>
                             </View>
                             <TextInput
                                 style={{
@@ -147,7 +147,7 @@ export const ProfileBody = ({
                                                 <Text style={{ color: 'gray' }}>{item.description}</Text>
                                             </View>
                                         </View>
-                                        <Feather name="chevron-right" style={{ fontSize: 20, color: 'white', marginLeft: -11}} />
+                                        <Feather name="chevron-right" style={{ fontSize: 20, color: 'white', marginLeft: -11 }} />
                                     </View>
                                 )}
                             />
@@ -162,7 +162,7 @@ export const ProfileBody = ({
                                 paddingTop: 4
                             }}
                         />
-                        
+
                         {/* Added TouchableOpacity to make the menu icon clickable */}
                         <TouchableOpacity
                             style={{ padding: 10 }}
@@ -234,42 +234,56 @@ export const ProfileButtons = ({ id, name, accountName, profileImage }) => {
                         width: '100%',
                         flexDirection: 'row',
                         alignItems: 'center',
-                        justifyContent: 'space-evenly',
+                        justifyContent: 'center', // Centering the buttons
                         paddingVertical: 5,
-                    }}>
-                    <TouchableOpacity
-                        onPress={() =>
-                            navigation.push('EditProfile', {
-                                name: name,
-                                accountName: accountName,
-                                profileImage: profileImage,
-                            })
-                        }
+                    }}
+                >
+                    <View
                         style={{
-                            width: '100%',
-                        }}>
-                        <View
+                            width: '45%',
+                            height: 35,
+                            borderRadius: 5,
+                            borderColor: '#DEDEDE',
+                            borderWidth: 1,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            marginRight: 10,
+                        }}
+                    >
+                        <Text
                             style={{
-                                width: '100%',
-                                height: 35,
-                                borderRadius: 5,
-                                borderColor: '#DEDEDE',
-                                borderWidth: 1,
-                                justifyContent: 'center',
-                                alignItems: 'center',
+                                fontWeight: '900',
+                                fontSize: 14,
+                                letterSpacing: 1,
+                                opacity: 0.8,
                             }}>
-                            <Text
-                                style={{
-                                    fontWeight: 'bold',
-                                    fontSize: 14,
-                                    letterSpacing: 1,
-                                    opacity: 0.8,
-                                }}>
-                                Edit Profile
-                            </Text>
-                        </View>
-                    </TouchableOpacity>
+                            Edit Profile
+                        </Text>
+                    </View>
+
+                    <View
+                        style={{
+                            width: '45%',
+                            height: 35,
+                            borderRadius: 5,
+                            borderColor: '#DEDEDE',
+                            borderWidth: 1,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <Text
+                            style={{
+                                fontWeight: '900',
+                                fontSize: 14,
+                                letterSpacing: 1,
+                                opacity: 0.8,
+                            }}>
+                            Share Profile
+                        </Text>
+                    </View>
                 </View>
+
             ) : (
                 <View
                     style={{
