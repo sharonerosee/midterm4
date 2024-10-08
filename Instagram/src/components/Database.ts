@@ -1,17 +1,15 @@
-// Database.ts
-
 export interface VideoData {
-    video: any;  // Change this to number to accommodate the require call
+    video: any; 
     title: string;
     description: string;
     likes: string;
-    isLike: boolean;  // Change Boolean to boolean for type consistency
+    isLike: boolean;  
     image_url: string;
 }
 
 export const videoData: VideoData[] = [
     {
-        video: require('~/assets/videos/video1.mp4'),  // This will be a number
+        video: require('~/assets/videos/video1.mp4'), 
         title: 'Ram_Charan',
         description: 'Feel the beauty of nature',
         likes: '245k',

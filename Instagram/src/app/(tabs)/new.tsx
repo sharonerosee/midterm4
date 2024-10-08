@@ -14,7 +14,6 @@ export default function CreatePost() {
     }, [image])
 
     const pickImage = async () => {
-        // No permissions request is necessary for launching the image library
         let result = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.Images,
             allowsEditing: true,
@@ -55,7 +54,9 @@ export default function CreatePost() {
 
             {/* Button */}
             <View style={{ marginTop: 'auto', width: '100%' }}>
-                <Button title='Share' />
+                <Pressable style={{ backgroundColor: '#3B82F6', padding: 12, borderRadius: 6, alignItems: 'center' }}>
+                    <Text style={{ color: 'white', fontWeight: '600', fontSize: 16 }}>Share</Text>
+                </Pressable>
             </View>
         </View>
     );

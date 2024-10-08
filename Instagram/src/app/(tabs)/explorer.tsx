@@ -30,37 +30,31 @@ const Search = () => {
   const windowWidth = Dimensions.get('window').width;
   const windowHeight = Dimensions.get('window').height;
 
-  // Handle Cancel button press
   const handleCancel = () => {
     setSearchText('');
     setIsFocused(false);
     dismissKeyboard();
   };
 
-  // Handle Search Submission
   const handleSearchSubmit = () => {
     if (searchText.trim() !== '') {
-      // Add to search history only when the search is submitted
       setSearchHistory((prevHistory) => {
         return [searchText, ...prevHistory];
       });
-      setSearchText(''); // Clear input after search
+      setSearchText(''); 
     }
-    dismissKeyboard(); // Dismiss keyboard after submitting
+    dismissKeyboard(); 
   };
 
-  // Handle changing text in the search bar
   const handleChangeText = (text: string) => {
     setSearchText(text);
   };
 
-  // Handle selecting from search history
   const handleSelectHistory = (item: string) => {
     setSearchText(item);
     setIsFocused(true);
   };
 
-  // Handle deleting a specific item from search history
   const handleDeleteHistoryItem = (index: number) => {
     setSearchHistory((prevHistory) =>
       prevHistory.filter((_, i) => i !== index)
@@ -164,7 +158,6 @@ const Search = () => {
             </ScrollView>
           )}
 
-          {/* Modal View when an image is selected */}
           {image && (
             <View
               style={{

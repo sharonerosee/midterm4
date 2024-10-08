@@ -15,8 +15,8 @@ const ReelsComponent: React.FC = () => {
       vertical={true}
       onChangeIndex={handleChangeIndexValue}
       data={videoData}
-      renderItem={({ item, index }: { item: VideoData; index: number }) => (
-        <SingleReel item={item} index={index} currentIndex={currentIndex} />
+      renderItem={({ item }: { item: VideoData }) => (
+        <SingleReel item={item} />
       )}
       keyExtractor={(item, index) => index.toString()} 
     />
