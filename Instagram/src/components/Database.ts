@@ -10,7 +10,7 @@ export interface VideoData {
 export const videoData: VideoData[] = [
     {
         video: require('~/assets/videos/video1.mp4'), 
-        title: 'Ram_Charan',
+        title: 'Sharone_Angel',
         description: 'Feel the beauty of nature',
         likes: '245k',
         isLike: false,
@@ -20,23 +20,23 @@ export const videoData: VideoData[] = [
     {
         video: require('~/assets/videos/video2.mp4'),
         title: 'The_Groot',
-        description: 'Feel the beauty of nature',
+        description: 'I am Groot!',
         likes: '656k',
         isLike: false,
         image_url: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
     },
     {
         video: require('~/assets/videos/video3.mp4'),
-        title: 'loverland',
-        description: 'Feel the beauty of nature',
+        title: 'build_guilt',
+        description: 'I am bored',
         likes: '242k',
         isLike: false,
         image_url: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg",
     },
     {
         video: require('~/assets/videos/video4.mp4'),
-        title: 'mr.bean',
-        description: 'Feel the beauty of nature',
+        title: 'queen_elizabeth',
+        description: 'I am the queen of british',
         likes: '502k',
         isLike: false,
         image_url: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg",
@@ -45,7 +45,7 @@ export const videoData: VideoData[] = [
     {
         video: require('~/assets/videos/video5.mp4'),
         title: 'naturbynature',
-        description: 'Feel the beauty of nature',
+        description: 'Boleh kaka langsung di beli',
         likes: '809k',
         isLike: false,
         image_url: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg",
